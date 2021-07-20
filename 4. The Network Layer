@@ -131,14 +131,15 @@ IP Datagram:
 
 * Address Resolution Protocol (ARP)
 -------------------------------------
--> MAC Addresses are used at the Data-link Layer.
--> IP addresses are used at the Network Layer.
--> ARP - A protocol used to discover the hardware address of a node with certain IP address;
--> Most network connected devices while retaining local ARP table;
--> ARP table - A list of IP Addresses and the MAC addresses associated with them;
+-> IP addresses are used at the Network Layer. However we will need the receiver's MAC address to fill the ethernet header in the data-link layer.
+    We use the ARP table for it.
+    
+-> ARP table - A map of IP Addresses and the MAC addresses associated with them;
 
--> The IP datagram once fully formed needs to be encapsulated inside an Ethernet frame, hence the transmitting device needs a destination MAC address to complete the Ethernet frame header;
--> Using the data in the ARP table the destination MAC address is seeked or else the transmitting device sends a broadcast ARP message to the MAC broadcast address which is FF:FF:FF:FF:FF:FF - these are delivered to all computers on a local network and the respective network interface sends a ARP response - that contains the MAC address for the network interface;
+-> ARP - A protocol used to discover the hardware address of a node with certain IP address; 
+       - Using the data in the ARP table the destination MAC address is seeked. If entry is not in ARP table then 
+         the transmitting device sends a broadcast ARP message via the destination MAC address which is FF:FF:FF:FF:FF:FF - These are delivered to 
+         all computers on a local network and the desired receiver computer (which will have the matching IP address as the destination IP address
+         in the ARP packet) will respond back with a ARP response - that contains the MAC address for the network interface. This is updated into the ARP table.
 
 -> ARP table entries generally expire after short amount of time to ensure changes in the network are accounted;
------------------------------------------------------------------------------------------------------------------------------------
