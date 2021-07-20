@@ -85,10 +85,15 @@ b. Fiber optic cables - Contain individual optical fiber, which are tiny tubes m
   
 2. Hubs and Switches
 ----------------------
-* Hub - A physical layer device that allows for connections from many computers at once, it could cause a collision domain;
-- Collison domain - a network segment where only one device can communicate at a time, otherwise electrical signal from other systems will interfere, slows;
+* Hub - A PHYSICAL LAYER device.
+	It cannot inspect the data stream being sent through it. It simply, broadcasts data it receives from a interface to all other conncected 
+	nodes on other interfaces. This can cause collisions. They are hence mostly obsolete.	
+	- Collison domain - a network segment where only one device can communicate at a time, otherwise electrical signal from other systems will
+	interfere, slows down the network.
 
-* Switch - A Data-link layer device - It inspects the contents of the Ethernet protocol data being sent around the network, determine which system the data is intended for and send it to it; Eliminates collision domain;
+* Switch - A DATA-LINK LAYER device.
+	It can inspects the contents of the Ethernet protocol data in the frames being sent, determine which system the data is intended for and
+	send it to it. Eliminates collision domain.
 
 3. Routers
 ------------
