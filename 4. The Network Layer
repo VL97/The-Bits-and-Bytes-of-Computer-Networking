@@ -28,6 +28,10 @@ this is termed as Dynamic IP Address; The other alternative is Static IP Address
 * IP Datagram and Encapsulation
 -----------------------------------
 
+In general:
+            IP DATAGRAM =  IP HEADER + TCP HEADER + MESSAGE
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 -> Encapsulation -> 
 
@@ -57,6 +61,9 @@ IP Datagram:
 - IP datagram - A highly structured series of fields that are strictly defined;
 - 2 primary sections of a IP datagram are Header and Payload;
 
+
+<---------------------------------4 BYTES------------------------------------>
+
 0          4               8             16           19                    31
 -----------------------------------------------------------------------------
 | Version  | Header Length | Service Type |         Total Length            |
@@ -78,15 +85,15 @@ IP Datagram:
            HEADER LENGTH = LENGTH OF IP HEADER = IP HEADER
            
 3. Service Type - 8 bits - specify the Quality Of Service - QoS technologies - could also prioritize IP Datagrams;
-4. Total Length - 16 bits - Indicate the total length of the IP datagram it's attached to:
+4. Total Length - 16 bits - Indicate the total length of the IP datagram IN BYTES:
             LENGTH = LENGTH OF IP DATAGRAM =  IP HEADER + TCP HEADER + MESSAGE
-    Since Length above is of 16 bits: max length of IP DATAGRAM can be 2^16-1: 65,535.
+    Since Length above is of 16 bits: max length of IP DATAGRAM can be 2^16-1: 65,535 (bytes)
 
 5. Identification - 16 bit number used to group messages together;
   The maximum size of a single IP datagram is the largest number that can be represented with 16 bits; 65,535;
-  If the total amount of data that needs to be sent is larger that what can fit a single datagram, the IP layer needs to split the data
-  up into many individual packets and the identification number will be the same for the packets to ensure the receiving ends
-  understands its all a part of the same transaction;
+  If the total amount of data from above layer that needs to be sent is larger that what can fit a single datagram (ie 65535-20 assuming 20 byte IP header), 
+  the IP layer needs to split the data up into many individual packets and the identification number will be the same for the packets to 
+  ensure the receiving ends understands its all a part of the same transaction;
 
 6. Flag - used to indicate if a datagram is allowed to be fragmented or to indicate the datagram has been fragmented already;
 7. Fragmentation - Process of taking a singlr IP datagram and splitting it up into several smaller datagrams;
