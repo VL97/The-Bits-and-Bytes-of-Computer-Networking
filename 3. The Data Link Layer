@@ -1,14 +1,24 @@
-* Ethernet and MAC Addresses
+* Ethernet
 ------------------------------
--> Ethernet - The protocol most widely used to send data scross individual networks;
--> Ethernet and the data link layer allow software at the higher level stack to send and receive data;
--> Ethernet solved the problem with collison domain by - carrier sense multiple access with collision domain - CSMA/CD;
+-> Ethernet - The DATA LINK LAYER protocol most widely used to send data scross individual networks;
+-> Ethernet solved the problem with collison domain by - 
+            Carrier Sense Multiple Access with Collision Detecttion - CSMA/CD  
+            Now Obsolete as we have full-duplex cables now.
 -> CSMA/CD - Used to determine when the coomunication is clear and when a device is free to transmit data;
     - If there is no data being transmitted on the network segment, a node will feel free to send the data;
     - If two or more computers end up trying to send data at the same time the computers detect the collision and stop sending the data;
     - Each device involved with the collision then waits a random interval of time before trying to send data again;
     - This random interval prevents the data from computers from colliding again;
-    
+
+https://www.youtube.com/watch?v=iKn0GzF5-IU
+
+* WIFI
+------------------------------
+-> Uses CSMA/CA - Carrier Sense Multiple Access with Collision Avoidance - CSMA/CA
+    - Works similar to CSMA/CD.
+    - Collisions are inferred from Non-receival of ACKs.
+    - May use RTS/CTS master-slave configuration.
+
   * MAC address (Media Access Controll Address)
   --------------------------------------------------
   * A globaly unique identifier attached to an individual network interface;
