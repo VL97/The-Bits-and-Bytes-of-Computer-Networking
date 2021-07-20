@@ -5,12 +5,12 @@ The Physical Layer
 * Bit - The smallest representation of data that a computer can understand; it's a one or zero;
 - Ones and Zeros are sent across the network through a process called modulation;
 * Modulation - It is a way of varying the voltage of the charges moving across the cable;
-* Line coding - Modulations used for computer networks -  enable devices and both ends of the network to realize the state of data as a 0 or a 1;
+* Line coding - Modulations used for twisted pair cable computer networks -  enable devices and both ends of the network to realize the state of data as a 0 or a 1;
 
 Twisted Pair Cabling and Duplexing
 -----------------------------------
 - Twisted Pairs -> Copper wires twised that behave as a conduit of information preventing electromagnetic interference and crosstalk from neighbouring pairs;
-- Standard CAT6 cable -> 8 wires, 4 twisted pairs inside a single jacket, based on the transmission technology used the respective no of pairs are used;
+- Standard twisted pair cable: CAT6 cable -> 8 wires, 4 twisted pairs inside a single jacket, based on the transmission technology used the respective no of pairs are used;
   https://www.youtube.com/watch?v=_NX99ad2FUA
 - Simplex, Hald-Duplex, Full Duplex:
   https://www.youtube.com/watch?v=kKCDLk9irkQ
