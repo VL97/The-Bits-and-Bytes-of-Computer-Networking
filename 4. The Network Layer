@@ -120,12 +120,8 @@ IP Datagram:
 --------------------
 -> Ip addresses can be split into 2 sections - network ID and the host ID; 
 -> Address Class System - A way of defining how a global IP address space is split up;
--> 3 primary types of address classes 
-  * Class A - 1st octet - Network ID, last three are used for Host ID; begin 0 ; 0 - 126  | 16 Million hosts ; 
-  * Class B - first two octets - Network ID, second two are used for the Host ID; begins with 10 ; 128 - 191 | 6400 Hosts ; 
-  * Class C - first three octets - Network ID, last octet - Host ID; begins with 110 ; 192 - 223 | 254 Hosts ;
-  * Class D - Begin with 1110 - used for multicasting - how a single IP datagram can be sent to an entire network at once ; 224 - 239;
-  * Class E - Unassigned and used for testing purposes - 240 - 255;
+
+See Gatesmashers.
   
 -> This class system has been replaced by CIDR (Classless inter-domain routing);
 
