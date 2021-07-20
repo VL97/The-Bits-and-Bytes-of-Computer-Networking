@@ -95,6 +95,8 @@ b. Fiber optic cables - Contain individual optical fiber, which are tiny tubes m
 	It can inspects the contents of the Ethernet protocol data in the frames being sent, determine which system the data is intended for and
 	send it to it. Eliminates collision domain.
 
+https://www.youtube.com/watch?v=ck3gx9HB9-k
+
 3. Routers
 ------------
 * Hubs and Switches are the primary devices used to connect computers on a single network , usually referred to as LAN (Local Area Network);
